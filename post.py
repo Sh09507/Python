@@ -24,7 +24,7 @@ def trylogin(payload, attempts):
 payload_good = {'username':'User_1', 'Password':'Password1234'}
 payload_badpassword = {'username':'User_1', 'password':'password10x'}
 payload_badcredentials = {'username':'russellx', 'password':'password10x'}
-attempts = 20
+attempts = 100
 
 print("Average good login:            " + str(trylogin(payload_good, attempts)))
 print("Average bad password:          " + str(trylogin(payload_badpassword, attempts)))
