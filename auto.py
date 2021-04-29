@@ -6,7 +6,7 @@ import time
 from bs4 import BeautifulSoup
 
 # Open the URL and get the response
-url = "https://thackston.me"
+url = "https://sabrinahill.xyz/websecurity"
 print("Opening " + url)
 start = time.clock()
 response = urllib.urlopen(url)

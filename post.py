@@ -12,7 +12,7 @@ def trylogin(payload, attempts):
     for i in range(0,attempts):
         session = requests.Session()
         start = time.clock()
-        response = session.post('https://russellthackston.me/index.php',headers=headers,data=payload)
+        response = session.post('https://sabrinahill.xyz/websecurity/login.php',headers=headers,data=payload)
         totaltime += time.clock() - start
 
         # Check for a successful login (Hint: look for New Topic form)
@@ -21,8 +21,8 @@ def trylogin(payload, attempts):
         newtopicform = soup.find_all('form', {"action" : "newtopic.php"})
     return totaltime / 10
 
-payload_good = {'username':'russell', 'password':'password10'}
-payload_badpassword = {'username':'russell', 'password':'password10x'}
+payload_good = {'username':'User_1', 'Password':'Password1234'}
+payload_badpassword = {'username':'User_1', 'password':'password10x'}
 payload_badcredentials = {'username':'russellx', 'password':'password10x'}
 attempts = 20
 
