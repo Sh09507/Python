@@ -93,7 +93,7 @@ else:
 	print(str(response.getcode()))
 
 
-url = "https://sabrinahill.xyz/websecurity/registrarion.php"
+url = "https://sabrinahill.xyz/websecurity/registration.php"
 print("Opening " + url)
 start = time.clock()
 response = urllib.urlopen(url)
