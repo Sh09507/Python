@@ -20,7 +20,7 @@ if response.getcode() >= 200 and response.getcode() < 300:
 		print("Redirected to " + response.geturl())
 	html_doc = response.read()
 	soup = BeautifulSoup(html_doc, 'html.parser')
-	for link in soup.find_all('a'): # It helps to find all anchor tag's
+	for link in soup.find_all('href'): # It helps to find all anchor tag's
 		print(link.get('href'))
 # Note: urllib.urlopen automatically follows redirects (codes 300-399)
 elif response.getcode() >= 400 and response.getcode() < 500:
